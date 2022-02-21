@@ -1,2 +1,8 @@
+windows: start with hyperv
+minikube start --driver=hyperv --image-mirror-country='cn'
+
+minikube dns
+https://minikube.sigs.k8s.io/docs/handbook/addons/ingress-dns/
+
 kubectl kustomize --enable-helm | kubectl apply -f -
 kubectl kustomize --enable-helm | kubectl delete -f -

@@ -1,0 +1,8 @@
+helmCharts:
+  - name: dapr
+    releaseName: dapr
+    repo: https://dapr.github.io/helm-charts/
+    version: 1.6.0
+    namespace: dapr-system
+    valuesFile: ./values.yaml
+    includeCRDs: true

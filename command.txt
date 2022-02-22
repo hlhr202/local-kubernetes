@@ -1,6 +1,10 @@
 windows: start with hyperv
 minikube start --driver=hyperv --image-mirror-country='cn'
 
+osx: start with hyperkit
+brew install hyperkit
+minikube start --driver=hyperkit
+
 minikube dns
 https://minikube.sigs.k8s.io/docs/handbook/addons/ingress-dns/
 

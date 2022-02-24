@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node -r esbuild-register index.ts",
-    "build": "esbuild index.ts --bundle --platform=node --outfile=index.js",
+    "build": "esbuild index.ts --bundle --platform=node --outfile=./dist/index.js",
     "build:minikube": "minikube image build -t dapr-node-client .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,0 +1,8 @@
+global:
+  storageClass: redis-sc
+  redis:
+    password: test-redis
+master:
+  persistence:
+    existingClaim: redis-pvc
+architecture: standalone

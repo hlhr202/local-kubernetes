@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dapr-node-client
+  labels:
+    app: node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node
+  template:
+    metadata:
+      labels:
+        app: node
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "dapr-node-client"
+        # dapr.io/app-port: "3000"
+        # dapr.io/config: "appconfig"
+    spec:
+      containers:
+      - name: node
+        image: docker.io/library/dapr-node-client:latest
+        ports:
+        - containerPort: 3000
+        imagePullPolicy: Never

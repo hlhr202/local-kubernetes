@@ -1,0 +1,13 @@
+apiVersion: dapr.io/v1alpha1
+kind: Configuration
+metadata:
+  name: appconfig
+spec:
+  accessControl:
+    defaultAction: deny
+    trustDomain: "public"
+    policies:
+    - appId: dapr-node-client
+      defaultAction: allow
+      trustDomain: 'public'
+      namespace: "dev"

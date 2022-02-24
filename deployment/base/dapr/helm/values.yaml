@@ -1,0 +1,5 @@
+global:
+  mtls:
+    enabled: false
+# dapr_sidecar_injector:
+#   hostNetwork: true

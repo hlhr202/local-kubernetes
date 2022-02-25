@@ -23,8 +23,8 @@ https://minikube.sigs.k8s.io/docs/handbook/addons/ingress-dns/
 ---
 
 ## kube apply with kustomize and helm
-kubectl kustomize --enable-helm | kubectl apply -f -
-kubectl kustomize --enable-helm | kubectl delete -f -
+kubectl kustomize --enable-helm | kubectl apply --wait -f -
+kubectl kustomize --enable-helm | kubectl delete --wait -f -
 
 ---
 

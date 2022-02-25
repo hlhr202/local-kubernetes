@@ -2,14 +2,20 @@
 
 for local computer usage
 
+## start minikube
 
-## DNS
+set default driver: minikube config set driver hyperkit
+
 windows: start with hyperv
-minikube start --driver=hyperv --insecure-registry "10.0.0.0/24" --image-mirror-country='cn'
+minikube start --insecure-registry "10.0.0.0/24" --image-mirror-country='cn'
 
 osx: start with hyperkit
 brew install hyperkit
 minikube start --driver=hyperkit --insecure-registry "10.0.0.0/24"
+
+---
+
+## DNS
 
 minikube dns
 https://minikube.sigs.k8s.io/docs/handbook/addons/ingress-dns/

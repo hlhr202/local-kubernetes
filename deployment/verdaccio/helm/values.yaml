@@ -1,0 +1,20 @@
+persistence:
+  enabled: true
+  existingClaim: verdaccio-pvc
+  storageClass: hostpath
+secrets:
+  # list of users and password for htpasswd plugin
+  # This this is mounted as /verdaccio/auth/htpasswd on pods
+  htpasswd:
+  - username: "test"
+    password: "test"
+  - username: "blah"
+    password: "blah"
+extraEnvVars:
+  - name: VERDACCIO_PORT
+    value: "4873"
+securityContext:
+  privileged: true
+  runAsUser: 0
+podSecurityContext:
+  fsGroup: 0

@@ -3,5 +3,6 @@ kind: Kustomization
 namespace: dapr-system
 resources:
   - namespace.yaml
+  - storage
   - ../base/redis
   - ../base/dapr

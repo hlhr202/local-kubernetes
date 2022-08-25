@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: verdaccio-pvc
+  namespace: verdaccio
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  volumeName: verdaccio-pv
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: hostpath

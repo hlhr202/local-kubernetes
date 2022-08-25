@@ -1,18 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: echo-server
+  name: verdaccio
+  namespace: verdaccio
   annotations:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: "dev.k8s.local"
+  - host: "verdaccio.k8s.local"
     http:
       paths:
       - pathType: Prefix
         path: "/"
         backend:
           service:
-            name: echo-server
+            name: npm-verdaccio
             port:
-              number: 80
+              number: 4873

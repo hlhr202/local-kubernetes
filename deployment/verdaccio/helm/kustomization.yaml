@@ -1,0 +1,9 @@
+helmCharts:
+  - name: verdaccio
+    releaseName: npm
+    repo: https://charts.verdaccio.org
+    version: 4.9.0
+    namespace: verdaccio
+    valuesMerge: merge
+    valuesFile: ./values.yaml
+    includeCRDs: true

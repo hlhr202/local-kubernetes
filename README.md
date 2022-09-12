@@ -2,25 +2,10 @@
 
 for local computer usage
 
-## start minikube
-
-set default driver: minikube config set driver hyperkit
-
-windows: start with hyperv
-minikube start --insecure-registry "10.0.0.0/24" --image-mirror-country='cn'
-
-osx: start with hyperkit
-brew install hyperkit
-minikube start --driver=hyperkit --insecure-registry "10.0.0.0/24"
-
 ---
-
-## DNS
-
-minikube dns
-https://minikube.sigs.k8s.io/docs/handbook/addons/ingress-dns/
-
----
+## Install ingress
+- User Docker Desktop Kubernetes
+- Follow https://kubernetes.github.io/ingress-nginx/deploy/#quick-start
 
 ## kube apply with kustomize and helm
 kubectl kustomize --enable-helm | kubectl apply --wait -f -

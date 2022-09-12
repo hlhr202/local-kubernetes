@@ -1,5 +1,4 @@
 global:
-  storageClass: redis-sc
   redis:
     password: test-redis
 master:

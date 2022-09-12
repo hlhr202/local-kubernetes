@@ -4,4 +4,5 @@ resources:
   - storage
   # - dapr-system
   - dev
-  - verdaccio
+  # - verdaccio
+  - redis

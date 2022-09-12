@@ -13,6 +13,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: echo-server
+            name: echo-server.dev
             port:
               number: 80

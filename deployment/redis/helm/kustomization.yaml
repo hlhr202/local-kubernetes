@@ -3,7 +3,7 @@ helmCharts:
     releaseName: redis
     repo: https://charts.bitnami.com/bitnami
     version: 16.4.0
-    namespace: dapr-system
+    namespace: redis
     valuesMerge: merge
     valuesFile: ./values.yaml
     includeCRDs: true

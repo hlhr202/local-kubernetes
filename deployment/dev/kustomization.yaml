@@ -3,6 +3,6 @@ kind: Kustomization
 namespace: dev
 resources:
   - namespace.yaml
-  - ingress.yaml
-  - ../base/echo
+  # - ingress.yaml
+  # - ../base/echo
   # - ../base/dapr-node-client
